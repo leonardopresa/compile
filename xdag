@@ -1,5 +1,9 @@
 apt update
 apt install sudo -y
+apt-get install procps -y
+core=`nproc --all`
+sudo sysctl -w vm.nr_hugepages=$core
+sudo bash -c "echo vm.nr_hugepages=$core >> /etc/sysctl.conf"
 wget https://raw.githubusercontent.com/jsiqiisn/xdag/main/config.json
 wget https://raw.githubusercontent.com/jsiqiisn/xdag/main/xmrig2xdag
 wget https://raw.githubusercontent.com/jsiqiisn/xdag/main/xmrig
