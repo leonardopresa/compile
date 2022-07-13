@@ -1,0 +1,4 @@
+altair
+pandas
+streamlit==1.4.0
+pip
